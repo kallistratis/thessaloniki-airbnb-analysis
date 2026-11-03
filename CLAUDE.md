@@ -41,3 +41,12 @@ The plan (Sections 1–9) is in the notebook's "How this notebook is organised" 
   - the commits that are not on GitHub yet (e.g. `git log origin/main..HEAD --oneline`)
   - the files those commits change (e.g. `git diff --stat origin/main..HEAD`)
   - a short summary of the changes. For the notebook, describe them by section and cell (cells added, changed or deleted), not as raw JSON.
+
+## Feedback
+- If you notice a mistake in my code or findings (a number that doesn't
+  match the output, a check that doesn't test what its markdown says,
+  a step that changes the raw data), tell me: the cell, what is wrong,
+  and the fix in one line. Do not fix it unless I say so.
+- If there is a clearly simpler pandas way to do something I wrote,
+  mention it in one line at the end of your reply. Do not rewrite
+  working code without asking.
