@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(git push*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|NotebookEdit|Read|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/protect_data.py\"",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/check_notebook_before_commit.py\"",
+            "timeout": 30,
+            "statusMessage": "Checking that the notebook was run after a restart..."
+          }
+        ]
+      }
+    ]
+  }
+}
