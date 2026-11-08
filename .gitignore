@@ -3,3 +3,4 @@ data_clean/
 .venv/
 .ipynb_checkpoints/
 __pycache__/
+backups/
